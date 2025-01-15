@@ -1,0 +1,234 @@
+
+
+
+
+
+
+/*read more blog*/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Assicura che tutte le card abbiano la stessa altezza */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    height: 400px;
+    object-fit: cover;
+    
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Forza il posizionamento uniforme del contenuto */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%; /* Rende il contenitore responsabile della disposizione */
+}
+
+.card-body h5 {
+    margin-bottom: auto; /* Permette al titolo di adattarsi alla lunghezza */
+}
+
+.card-body p {
+    flex-grow: 1;
+}
+
+.card-body .btn {
+    margin-top: auto; /* Spinge il bottone verso il basso */
+    align-self: center; /* Allinea il bottone al centro orizzontalmente */
+    visibility: visible; /* Garantisce che sia sempre visibile */
+    opacity: 1; /* Rende il bottone completamente visibile */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animazione opzionale */
+background-color: beige;
+border:2px solid black
+}
+
+.card:hover .btn {
+    transform: scale(1.05); /* Effetto al passaggio del mouse (opzionale) */
+}
+/*BLOG1*/
+
+
+.blog-container {
+    max-width: 900px;
+    margin: -30px auto 50px;
+    padding: 30px;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border: 2px solid #eaeaea;
+}
+.testoBottone_blog {text-align: center;}
+.blog-content {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: ;
+}
+
+.blog-meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
+.blog-content img {width: 100%;height: auto;}
+.blog-meta i {
+    margin-right: 5px;
+    color: #0047ab;
+}
+
+.blog-meta span {
+    margin-right: 20px;
+}
+
+.blog-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #0047ab;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-video {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0047ab;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-video:hover {
+    background-color: #003b8a;
+}
+
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.video-modal.show {
+    display: flex;
+}
+
+.video-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-content video {
+    width: 100%;
+    height: auto;
+}
+
+.video-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.blog-section {
+    margin-bottom: 40px;
+}
+
+.blog-section h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #2d3436;
+    margin: 30px 0 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.highlight {
+    color: #0047ab;
+    font-weight: 600;
+}
+
+.blog-quote {
+    border-left: 4px solid #0047ab;
+    padding-left: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .blog-content h2 {
+        font-size: 1.8rem;
+        flex-direction: column;
+    }
+
+    .blog-content {
+        padding: 20px;
+    }
+}
